@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myColors</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="main-header">
+      <ul class="row">
+        <li>
+          <h1>MY COLORS <i class="ri-palette-line"></i></h1>
+        </li>
+        <section id="options">
+          <ul class="row">
+            <li>
+              <button class="tagBtn" onclick="setRandomPalette()">
+                <i class="ri-dice-fill"></i>
+              </button>
+            </li>
+            <li>
+              <button class="tagBtn" onclick="deletePalette()">
+                <i class="ri-delete-bin-5-fill"></i>
+              </button>
+            </li>
+            <li>
+              <button class="tagBtn" onclick="modalDownloadOpen();">
+                <i class="ri-download-line"></i>
+              </button>
+            </li>
+            <li>
+              <button class="tagBtn" onclick="modalSavePaletteOpen()">
+                <i class="ri-save-fill"></i>
+              </button>
+            </li>
+            <li>
+              <button class="tagBtn" onclick="modalRegisterOpen()">
+                <i class="ri-user-fill"></i>
+              </button>
+            </li>
+          </ul>
+        </section>
+      </ul>
+    </header>
+    <main id="main-main">
+      <section id="picker">
+        <div id="color">
+          <input id="dropperColorInput" type="color" value="#244657" />
+        </div>
+        <footer>
+          <ul class="row">
+            <li>
+              <input
+                type="text"
+                placeholder="WHITE / #FFF"
+                id="colorInput"
+                onchange="changePickerColor()"
+              />
+            </li>
+            <li>
+              <nav class="row">
+                <button class="tagBtn" onclick="ableDropperColor()">
+                  <i class="ri-sip-fill"></i>
+                </button>
+                <button class="tagBtn" onclick="setRandomColor()">
+                  <i class="ri-dice-fill"></i>
+                </button>
+                <button class="tagBtn" onclick="addColorToPalette()">
+                  <i class="ri-add-circle-fill"></i>
+                </button>
+              </nav>
+            </li>
+          </ul>
+        </footer>
+      </section>
+      <aside id="palette">
+        <ul id="palette-colors">
+          <li onclick="deleteColorFromPalette()" class="palette-color"></li>
+        </ul>
+      </aside>
+    </main>
+    <footer id="main-footer">
+      <ul class="row">
+        <li><small>myColors 2024</small></li>
+        <li><small>Developed by Alonso Martinez</small></li>
+      </ul>
+    </footer>
+    <!-- MODALS-->
+    <section id="modal-download" class="modal">
+      <div class="modal-bg" onclick="exitModal()"></div>
+      <div class="container">
+        <header>
+          <nav class="row">
+            <h1>DOWNLOAD</h1>
+            <button class="tagBtn exit-modal" onclick="exitModal()">
+              <i class="ri-close-circle-fill"></i>
+            </button>
+          </nav>
+        </header>
+        <main>
+          <textarea id="download-prev" rows="10" disabled></textarea>
+          <form id="download-form" class="row">
+            <input
+              type="text"
+              id="paletteNameInput"
+              placeholder="MY PALETTE NAME"
+            />
+          </form>
+        </main>
+        <footer class="row">
+          <button class="tagBtn" onclick="downloadPalette();">
+            <i class="ri-download-line"></i>
+          </button>
+          <button class="tagBtn" onclick="copyToClipboard(makePaletteFile());">
+            <i class="ri-file-copy-line"></i>
+          </button>
+        </footer>
+      </div>
+    </section>
+    <section id="modal-login" class="modal">
+      <div class="modal-bg" onclick="exitModal()"></div>
+      <div class="container">
+        <header>
+          <nav class="row">
+            <h1>LOG IN</h1>
+            <button class="tagBtn exit-modal" onclick="exitModal()">
+              <i class="ri-close-circle-fill"></i>
+            </button>
+          </nav>
+        </header>
+        <main>
+          <form>
+            <input type="text" name="user-name" placeholder="User name" />
+            <input
+              type="password"
+              name="user-password"
+              placeholder="Password"
+            />
+            <input type="submit" name="login-submit" value="LOG IN" />
+          </form>
+        </main>
+        <footer class="row">
+          <a onclick="exitModal();modalRegisterOpen()"
+            ><small>REGISTER</small></a
+          >
+        </footer>
+      </div>
+    </section>
+    <section id="modal-register" class="modal">
+      <div class="modal-bg" onclick="exitModal()"></div>
+      <div class="container">
+        <header>
+          <nav class="row">
+            <h1>REGISTER</h1>
+            <button class="tagBtn exit-modal" onclick="exitModal()">
+              <i class="ri-close-circle-fill"></i>
+            </button>
+          </nav>
+        </header>
+        <main>
+          <form>
+            <input type="text" name="user-name" placeholder="User name" />
+            <input
+              type="mail"
+              name="user-mail"
+              placeholder="usermail@your.mail"
+            />
+            <input
+              type="password"
+              name="user-password"
+              placeholder="Password"
+            />
+            <input type="submit" name="login-submit" value="REGISTER" />
+          </form>
+        </main>
+        <footer class="row">
+          <a onclick="exitModal(); modalLoginOpen();"><small>LOG IN</small></a>
+        </footer>
+      </div>
+    </section>
+    <section id="modal-savePalette" class="modal">
+      <div class="modal-bg" onclick="exitModal()"></div>
+      <div class="container">
+        <header>
+          <nav class="row">
+            <h1>SAVE PALETTE</h1>
+            <button class="tagBtn exit-modal" onclick="exitModal()">
+              <i class="ri-close-circle-fill"></i>
+            </button>
+          </nav>
+        </header>
+        <main>
+          <form>
+            <input type="text" name="user-name" placeholder="MY PALETTE NAME" />
+          </form>
+          <aside id="modal-palette">
+            <ul id="modal-palette-colors">
+              <li class="palette-color"></li>
+            </ul>
+          </aside>
+        </main>
+        <footer class="row">
+          <button class="tagBtn"><i class="ri-save-fill"></i></button>
+        </footer>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
