@@ -22,7 +22,7 @@ The action bar has the following functionalities:
 * Download palette in CSS format 
 * Save palette
 
-![palette](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/palette.PNG?raw=true)
+![palette](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/palette.PNG?raw=true =250x250)
 #### Download palette in CSS format
 This action consist in the download each color of the palette as CSS ':root' variables
 
@@ -36,7 +36,7 @@ This action consist in saving the palette on the user palette galery.
 We also find the design of user actions in the top bar. These actions consist of user registration.
 > Note: Only design, not implemented
 #### Log in
-![log in](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/login.PNG?raw=true)
+![log in](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/log%20in.PNG?raw=true)
 #### Register
 ![register](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/register.PNG?raw=true)
 ## Mobile Design
