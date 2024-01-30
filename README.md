@@ -1,6 +1,6 @@
 # myColors
 A JavaScript, HTML & CSS design about a color palette maker
-[GitHub Pages](https://pages.github.com/](https://alonsomartinez8.github.io/myColors-PaletteMaker/))
+> [myColors - GitHub Pages](https://pages.github.com/](https://alonsomartinez8.github.io/myColors-PaletteMaker/))
 
 ![myColors](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/myColors.PNG?raw=true)
 ## Features
@@ -22,7 +22,7 @@ The action bar has the following functionalities:
 * Download palette in CSS format 
 * Save palette
 
-![palette](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/palette.PNG?raw=true =250x250)
+![palette](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/palette.PNG?raw=true)
 #### Download palette in CSS format
 This action consist in the download each color of the palette as CSS ':root' variables
 
