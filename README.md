@@ -1,5 +1,6 @@
 # myColors
 A JavaScript, HTML & CSS design about a color palette maker
+[GitHub Pages](https://pages.github.com/](https://alonsomartinez8.github.io/myColors-PaletteMaker/))
 
 ![myColors](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/myColors.PNG?raw=true)
 ## Features
@@ -35,6 +36,10 @@ This action consist in saving the palette on the user palette galery.
 We also find the design of user actions in the top bar. These actions consist of user registration.
 > Note: Only design, not implemented
 #### Log in
-![log in](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/log-in.PNG?raw=true)
+![log in](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/login.PNG?raw=true)
 #### Register
 ![register](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/register.PNG?raw=true)
+## Mobile Design
+We also have the mobile version of the design
+
+![mobile](https://github.com/alonsomartinez8/myColors-PaletteMaker/blob/main/img/mobile.PNG?raw=true)
