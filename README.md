@@ -1,0 +1,2 @@
+# myColors
+## Palette Maker
